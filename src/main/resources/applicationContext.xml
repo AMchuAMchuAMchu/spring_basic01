@@ -5,6 +5,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="Anime01" class="com.itheima.spring.bean.impl.Anime01"></bean>
+
+    <bean id="AnimeTime01" class="com.itheima.spring.bean.impl.AnimeTime01"></bean>
+
+    <bean id="Anime01" class="com.itheima.spring.bean.impl.Anime01">
+        <property name="animeTime" ref="AnimeTime01"></property>
+    </bean>
 
 </beans>

@@ -21,5 +21,6 @@ public class Test01 {
 
         anime01.printAnimeName();
 
+
     }
 }
