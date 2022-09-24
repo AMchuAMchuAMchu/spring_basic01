@@ -4,6 +4,8 @@ import com.itheima.spring.dao.AnimeInfo;
 import com.itheima.spring.dao.AnimeKNCW;
 import com.itheima.spring.dao.AnimeName;
 import com.itheima.spring.dao.AnimeTime;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
 /**
  * Description==>TODO
@@ -13,7 +15,8 @@ import com.itheima.spring.dao.AnimeTime;
  * Version==>1.0
  * Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start
  */
-public class AnimeInfoImpl implements AnimeInfo {
+//public class AnimeInfoImpl implements AnimeInfo, InitializingBean, DisposableBean {
+public class AnimeInfoImpl implements AnimeInfo{
 
     private AnimeName animeName;
 
@@ -21,7 +24,11 @@ public class AnimeInfoImpl implements AnimeInfo {
 
     private AnimeKNCW animeKNCW;
 
-//    public AnimeInfoImpl(AnimeName animeName, AnimeTime animeTime, AnimeKNCW animeKNCW) {
+    public AnimeInfoImpl() {
+//        System.out.println("AnimeInfoImpl constructor...");
+    }
+
+    //    public AnimeInfoImpl(AnimeName animeName, AnimeTime animeTime, AnimeKNCW animeKNCW) {
 //        this.animeName = animeName;
 //        this.animeTime = animeTime;
 //        this.animeKNCW = animeKNCW;
@@ -53,4 +60,14 @@ public class AnimeInfoImpl implements AnimeInfo {
     public void getAnimeKNCW() {
         animeKNCW.sayHello();
     }
+
+//    @Override
+//    public void destroy() throws Exception {
+//        System.out.println("AnimeInfoImpl destroy ...");
+//    }
+//
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        System.out.println("AnimeInfoImpl initializing...");
+//    }
 }

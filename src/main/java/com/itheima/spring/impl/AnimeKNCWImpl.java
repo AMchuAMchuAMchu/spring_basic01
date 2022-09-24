@@ -12,9 +12,12 @@ import org.springframework.beans.factory.InitializingBean;
  * Version==>1.0
  * Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start
  */
-public class AnimeKNCWImpl implements AnimeKNCW, InitializingBean, DisposableBean {
+public class AnimeKNCWImpl implements AnimeKNCW {
 
 
+    public AnimeKNCWImpl(){
+
+    }
 //
 //    public void destroy(){
 //        System.out.println("destroy...");
@@ -29,13 +32,13 @@ public class AnimeKNCWImpl implements AnimeKNCW, InitializingBean, DisposableBea
         System.out.println("哦哈呦~~阔你吃哇...");
     }
 
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("AnimeKNCWImpl destroy ...");
-    }
-
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("AnimeKNCWImpl initial ....");
-    }
+//    @Override
+//    public void destroy() throws Exception {
+//        System.out.println("AnimeKNCWImpl destroy ...");
+//    }
+//
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        System.out.println("AnimeKNCWImpl initial ....");
+//    }
 }

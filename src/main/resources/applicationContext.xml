@@ -38,6 +38,28 @@
 <!--    <bean id="FactoryBean02" class="com.itheima.spring.utils.FactoryBean02"></bean>-->
 
 
+        <bean id="AnimePrintInfoImpl" class="com.itheima.spring.impl.AnimePrintInfoImpl">
+            <property name="animeName" value="契约之吻"></property>
+            <property name="releaseTime" value="2022"></property>
+        </bean>
 
+
+<!--        <bean id="AnimePrintInfo02Impl" class="com.itheima.spring.impl.AnimePrintInfo02Impl">-->
+<!--            <constructor-arg name="animeKNCW" ref="AnimeKNCWImpl"></constructor-arg>-->
+<!--            <constructor-arg name="animeName" value="Lycoris Recoil"></constructor-arg>-->
+<!--            <constructor-arg name="releaseTime" value="2022"></constructor-arg>-->
+<!--        </bean>-->
+
+<!--        <bean id="AnimePrintInfo02Impl" class="com.itheima.spring.impl.AnimePrintInfo02Impl">-->
+<!--            <constructor-arg index="0" ref="AnimeKNCWImpl"></constructor-arg>-->
+<!--            <constructor-arg index="1" value="Lycoris Recoil"></constructor-arg>-->
+<!--            <constructor-arg index="2" value="2022"></constructor-arg>-->
+<!--        </bean>-->
+
+        <bean id="AnimePrintInfo02Impl" class="com.itheima.spring.impl.AnimePrintInfo02Impl">
+            <constructor-arg type="com.itheima.spring.impl.AnimeKNCWImpl" ref="AnimeKNCWImpl"></constructor-arg>
+            <constructor-arg type="java.lang.String" value="Lycoris Recoil"></constructor-arg>
+            <constructor-arg type="java.lang.Integer" value="2022"></constructor-arg>
+        </bean>
 
 </beans>

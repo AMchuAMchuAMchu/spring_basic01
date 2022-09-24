@@ -1,10 +1,7 @@
 package com.itheima.spring.service;
 
 import com.itheima.spring.dao.AnimeTime;
-import com.itheima.spring.impl.AnimeInfoImpl;
-import com.itheima.spring.impl.AnimeKNCWImpl;
-import com.itheima.spring.impl.AnimeNameImpl;
-import com.itheima.spring.impl.AnimeTimeImpl;
+import com.itheima.spring.impl.*;
 import com.itheima.spring.utils.FactoryCreateBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.FactoryBean;
@@ -27,15 +24,31 @@ public class AnimeTest01 {
 
 
     @Test
+    public void testDIConstructor(){
+
+        AnimePrintInfo02Impl bean = cpx.getBean(AnimePrintInfo02Impl.class);
+
+        bean.printInfo();
+
+    }
+
+    @Test
+    public void testSetterDISinple(){
+        AnimePrintInfoImpl animePrintInfo = cpx.getBean(AnimePrintInfoImpl.class);
+
+        animePrintInfo.printInfo();
+    }
+
+    @Test
     public void testBeanLifeCircle(){
 
-        AnimeKNCWImpl bean = cpx.getBean(AnimeKNCWImpl.class);
+        AnimeInfoImpl bean = cpx.getBean(AnimeInfoImpl.class);
 
-        bean.sayHello();
+        bean.getAnimeKNCW();
 
 //        cpx.close();
 
-//        cpx.registerShutdownHook();
+        cpx.registerShutdownHook();
 
 
     }
