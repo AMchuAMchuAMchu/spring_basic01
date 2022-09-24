@@ -26,13 +26,16 @@
 
     <bean  name="AnimeNameImpl" class="com.itheima.spring.impl.AnimeNameImpl" ></bean>
     <bean  name="AnimeTimeImpl" class="com.itheima.spring.impl.AnimeTimeImpl" ></bean>
-    <bean  name="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl" ></bean>
+<!--    <bean  name="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl" init-method="init" destroy-method="destroy"></bean>-->
+    <bean  name="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl"></bean>
 
-    <bean id="FactoryCreateBeanP" class="com.itheima.spring.utils.FactoryCreateBean"></bean>
+<!--    <bean id="FactoryCreateBeanP" class="com.itheima.spring.utils.FactoryCreateBean"></bean>-->
 
-    <bean id="FactoryCreateBean" class="com.itheima.spring.utils.FactoryCreateBean" factory-method="getAnimeKNCWBean"></bean>
+<!--    <bean id="FactoryCreateBean" class="com.itheima.spring.utils.FactoryCreateBean" factory-method="getAnimeKNCWBean"></bean>-->
 
-    <bean id="FactoryCreateBean02" factory-bean="FactoryCreateBeanP" factory-method="getAnimeKNCWImplBean"></bean>
+<!--    <bean id="FactoryCreateBean02" factory-bean="FactoryCreateBeanP" factory-method="getAnimeKNCWImplBean"></bean>-->
+
+<!--    <bean id="FactoryBean02" class="com.itheima.spring.utils.FactoryBean02"></bean>-->
 
 
 

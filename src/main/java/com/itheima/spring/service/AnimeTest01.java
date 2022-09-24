@@ -7,6 +7,7 @@ import com.itheima.spring.impl.AnimeNameImpl;
 import com.itheima.spring.impl.AnimeTimeImpl;
 import com.itheima.spring.utils.FactoryCreateBean;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
@@ -25,6 +26,30 @@ public class AnimeTest01 {
             "applicationContext.xml");
 
 
+    @Test
+    public void testBeanLifeCircle(){
+
+        AnimeKNCWImpl bean = cpx.getBean(AnimeKNCWImpl.class);
+
+        bean.sayHello();
+
+//        cpx.close();
+
+//        cpx.registerShutdownHook();
+
+
+    }
+
+
+
+    @Test
+    public void testFactoryBean(){
+
+        AnimeKNCWImpl factoryBean = (AnimeKNCWImpl) cpx.getBean("FactoryBean02");
+
+        factoryBean.sayHello();
+
+    }
 
 
     @Test
