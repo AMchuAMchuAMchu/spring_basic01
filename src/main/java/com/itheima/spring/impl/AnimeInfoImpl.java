@@ -21,6 +21,18 @@ public class AnimeInfoImpl implements AnimeInfo {
 
     private AnimeKNCW animeKNCW;
 
+    public void setAnimeName(AnimeName animeName) {
+        this.animeName = animeName;
+    }
+
+    public void setAnimeTime(AnimeTime animeTime) {
+        this.animeTime = animeTime;
+    }
+
+    public void setAnimeKNCW(AnimeKNCW animeKNCW) {
+        this.animeKNCW = animeKNCW;
+    }
+
     @Override
     public String getAnimeName() {
         return animeName.getAnimeName();

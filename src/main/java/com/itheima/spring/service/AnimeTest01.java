@@ -1,6 +1,8 @@
 package com.itheima.spring.service;
 
+import com.itheima.spring.impl.AnimeInfoImpl;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
@@ -14,8 +16,19 @@ import java.util.Scanner;
  */
 public class AnimeTest01 {
 
+
+
     @Test
     public void getBean(){
+
+        ClassPathXmlApplicationContext cpx = new ClassPathXmlApplicationContext(
+                "applicationContext.xml");
+
+        AnimeInfoImpl animeInfo = (AnimeInfoImpl) cpx.getBean("AnimeInfoImpl");
+
+        System.out.println("Name >> "+animeInfo.getAnimeName());
+        System.out.println("Time >> "+animeInfo.getAnimeTime());
+        animeInfo.getAnimeKNCW();
 
 
 

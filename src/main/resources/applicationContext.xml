@@ -5,8 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="AnimeName" class="com.itheima.spring.dao.AnimeName"></bean>
 
+    <bean id="AnimeInfoImpl" class="com.itheima.spring.impl.AnimeInfoImpl">
+        <property name="animeName" ref="AnimeNameImpl"></property>
+        <property name="animeTime" ref="AnimeTimeImpl"></property>
+        <property name="animeKNCW" ref="AnimeKNCWImpl"></property>
+    </bean>
+    
+    <bean id="AnimeNameImpl" class="com.itheima.spring.impl.AnimeNameImpl"></bean>
+    <bean id="AnimeTimeImpl" class="com.itheima.spring.impl.AnimeTimeImpl"></bean>
+    <bean id="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl"></bean>
 
 
 </beans>
