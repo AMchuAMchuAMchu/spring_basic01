@@ -11,10 +11,18 @@
         <property name="animeTime" ref="AnimeTimeImpl"></property>
         <property name="animeKNCW" ref="AnimeKNCWImpl"></property>
     </bean>
-    
-    <bean id="AnimeNameImpl" class="com.itheima.spring.impl.AnimeNameImpl"></bean>
-    <bean id="AnimeTimeImpl" class="com.itheima.spring.impl.AnimeTimeImpl"></bean>
-    <bean id="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl"></bean>
+<!--    -->
+<!--    <bean  id="AnimeNameImpl" class="com.itheima.spring.impl.AnimeNameImpl"></bean>-->
+<!--    <bean  id="AnimeTimeImpl" class="com.itheima.spring.impl.AnimeTimeImpl"></bean>-->
+<!--    <bean  id="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl"></bean>-->
+
+<!--    <bean  name="AnimeNameImpl" class="com.itheima.spring.impl.AnimeNameImpl" scope="singleton"></bean>-->
+<!--    <bean  name="AnimeTimeImpl" class="com.itheima.spring.impl.AnimeTimeImpl" scope="singleton"></bean>-->
+<!--    <bean  name="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl" scope="singleton"></bean>-->
+
+    <bean  name="AnimeNameImpl" class="com.itheima.spring.impl.AnimeNameImpl" scope="prototype"></bean>
+    <bean  name="AnimeTimeImpl" class="com.itheima.spring.impl.AnimeTimeImpl" scope="prototype"></bean>
+    <bean  name="AnimeKNCWImpl" class="com.itheima.spring.impl.AnimeKNCWImpl" scope="prototype"></bean>
 
 
 </beans>
