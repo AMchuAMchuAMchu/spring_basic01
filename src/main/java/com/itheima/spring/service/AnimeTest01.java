@@ -2,8 +2,10 @@ package com.itheima.spring.service;
 
 import com.itheima.spring.dao.AnimeTime;
 import com.itheima.spring.impl.AnimeInfoImpl;
+import com.itheima.spring.impl.AnimeKNCWImpl;
 import com.itheima.spring.impl.AnimeNameImpl;
 import com.itheima.spring.impl.AnimeTimeImpl;
+import com.itheima.spring.utils.FactoryCreateBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -23,8 +25,56 @@ public class AnimeTest01 {
             "applicationContext.xml");
 
 
+
+
     @Test
-    public void testPrototype(){
+    public void testFactoryMethodXMLNotStatic(){
+        AnimeKNCWImpl fcb02 = (AnimeKNCWImpl) cpx.getBean("FactoryCreateBean02");
+
+        fcb02.sayHello();
+
+
+    }
+
+
+    @Test
+    public void testFactoryMethodXML() {
+
+        AnimeKNCWImpl cpxBean = (AnimeKNCWImpl) cpx.getBean("FactoryCreateBean");
+
+        cpxBean.sayHello();
+
+    }
+
+    @Test
+    public void testFactoryMethod() {
+
+        AnimeKNCWImpl animeKNCWBean = FactoryCreateBean.getAnimeKNCWBean();
+
+        animeKNCWBean.sayHello();
+
+    }
+
+    @Test
+    public void testConstructorArgs() {
+
+        AnimeInfoImpl animeInfo = cpx.getBean(AnimeInfoImpl.class);
+
+        animeInfo.getAnimeKNCW();
+
+    }
+
+    @Test
+    public void testConstructor() {
+
+        AnimeTimeImpl bean = cpx.getBean(AnimeTimeImpl.class);
+
+        System.out.println(bean.getAnimeTime());
+
+    }
+
+    @Test
+    public void testPrototype() {
 
         AnimeNameImpl bean01 = cpx.getBean(AnimeNameImpl.class);
         AnimeNameImpl bean02 = cpx.getBean(AnimeNameImpl.class);
@@ -37,31 +87,26 @@ public class AnimeTest01 {
     }
 
     @Test
-    public void testSingleTon(){
+    public void testSingleTon() {
 
         AnimeTimeImpl animeTime01 = (AnimeTimeImpl) cpx.getBean("AnimeTimeImpl");
         AnimeTimeImpl animeTime02 = (AnimeTimeImpl) cpx.getBean("AnimeTimeImpl");
 
-        System.out.println("01 "+animeTime01);
-        System.out.println("02 "+animeTime02);
+        System.out.println("01 " + animeTime01);
+        System.out.println("02 " + animeTime02);
 
 
     }
 
 
-
-
-
-
     @Test
-    public void getBean(){
+    public void getBean() {
 
         AnimeInfoImpl animeInfo = (AnimeInfoImpl) cpx.getBean("AnimeInfoImpl");
 
-        System.out.println("Name >> "+animeInfo.getAnimeName());
-        System.out.println("Time >> "+animeInfo.getAnimeTime());
+        System.out.println("Name >> " + animeInfo.getAnimeName());
+        System.out.println("Time >> " + animeInfo.getAnimeTime());
         animeInfo.getAnimeKNCW();
-
 
 
     }

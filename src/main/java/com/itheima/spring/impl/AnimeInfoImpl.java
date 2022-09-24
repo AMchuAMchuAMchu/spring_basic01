@@ -21,6 +21,12 @@ public class AnimeInfoImpl implements AnimeInfo {
 
     private AnimeKNCW animeKNCW;
 
+//    public AnimeInfoImpl(AnimeName animeName, AnimeTime animeTime, AnimeKNCW animeKNCW) {
+//        this.animeName = animeName;
+//        this.animeTime = animeTime;
+//        this.animeKNCW = animeKNCW;
+//    }
+
     public void setAnimeName(AnimeName animeName) {
         this.animeName = animeName;
     }

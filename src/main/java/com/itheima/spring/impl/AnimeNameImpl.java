@@ -15,7 +15,6 @@ import com.itheima.spring.dao.AnimeTime;
 public class AnimeNameImpl implements AnimeName {
 
 
-
     @Override
     public String getAnimeName() {
         return "Lycoris Recoil 锦木千束:#?井之上泷奈...";

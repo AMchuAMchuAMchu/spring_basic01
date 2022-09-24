@@ -15,6 +15,11 @@ import com.itheima.spring.dao.AnimeTime;
 public class AnimeTimeImpl implements AnimeTime {
 
 
+//
+//    private AnimeTimeImpl(){
+//        System.out.println("private AnimeTimeImpl ....start running ....");
+//    }
+
     @Override
     public Integer getAnimeTime() {
         return 2022;
