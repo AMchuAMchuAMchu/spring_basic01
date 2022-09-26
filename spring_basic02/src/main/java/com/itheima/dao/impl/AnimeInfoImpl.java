@@ -28,6 +28,7 @@ public class AnimeInfoImpl implements AnimeInfo {
 
     @Override
     public void printAnimeInfo() {
-
+        animeName.getAnimeName();
+        animeTime.getAnimeTime();
     }
 }
