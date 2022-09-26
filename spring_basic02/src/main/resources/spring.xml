@@ -5,11 +5,46 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="AnimeTime" class="com.itheima.dao.impl.AnimeTimeImpl"></bean>
+<!--    <bean id="AnimeTime" class="com.itheima.dao.impl.AnimeTimeImpl"></bean>-->
 
-    <bean id="AnimeName" class="com.itheima.dao.impl.AnimeNameImpl"></bean>
+<!--    <bean id="AnimeName" class="com.itheima.dao.impl.AnimeNameImpl"></bean>-->
 
-    <bean id="AnimeInfoImpl" class="com.itheima.dao.impl.AnimeInfoImpl" autowire="byType"></bean>
+    <bean id="animeTime" class="com.itheima.dao.impl.AnimeTimeImpl"></bean>
+
+    <bean id="animeName" class="com.itheima.dao.impl.AnimeNameImpl"></bean>
+
+
+<!--    <bean id="AnimeInfoImpl" class="com.itheima.dao.impl.AnimeInfoImpl" autowire="byType"></bean>-->
+    <bean id="AnimeInfoImpl" class="com.itheima.dao.impl.AnimeInfoImpl" autowire="byName"></bean>
+
+
+    <bean id="AnimeCollectionDITestImpl" class="com.itheima.dao.impl.AnimeCollectionDITestImpl">
+        <property name="list">
+            <list>
+                <value>彻夜之歌</value>
+                <value>Lycoris Recoil</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>shadow house</value>
+                <value>契约之吻</value>
+                <value>契约之吻</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="anime01" value="SAO||ALO"></entry>
+                <entry key="anime02" value="GGO幽灵子弹"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="anime03">哥布林杀手</prop>
+                <prop key="anime04">黑岩射手</prop>
+            </props>
+        </property>
+    </bean>
 
 
 

@@ -1,5 +1,6 @@
 package com.itheima.test;
 
+import com.itheima.dao.impl.AnimeCollectionDITestImpl;
 import com.itheima.dao.impl.AnimeInfoImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -16,6 +17,15 @@ public class AnimeInfoTest01 {
     public ClassPathXmlApplicationContext cpx = new ClassPathXmlApplicationContext("spring" +
             ".xml");
 
+
+    @Test
+    public void testAnimeCollectionDI(){
+        AnimeCollectionDITestImpl bean = cpx.getBean(AnimeCollectionDITestImpl.class);
+        bean.getList();
+        bean.getSet();
+        bean.getMap();
+        bean.getProperties();
+    }
 
     @Test
     public void testAutowired() {
