@@ -14,6 +14,10 @@ import com.itheima.dao.AnimeTime;
  */
 public class AnimeInfoImpl implements AnimeInfo {
 
+    public AnimeInfoImpl() {
+        System.out.println("AnimeInfoImpl constructor....");
+    }
+
     private AnimeTime animeTime;
 
     private AnimeName animeName;

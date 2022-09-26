@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 /**
  * Description==>TODO
@@ -19,6 +20,25 @@ import java.sql.SQLException;
 public class AnimeInfoTest01 {
     public ClassPathXmlApplicationContext cpx = new ClassPathXmlApplicationContext("spring" +
             ".xml");
+
+
+
+    @Test
+    public void testLazy_init(){
+
+
+
+    }
+
+
+    @Test
+    public void testEnv(){
+
+        Map<String, String> getenv = System.getenv();
+
+        getenv.entrySet().forEach(System.out::println);
+
+    }
 
 
     @Test
