@@ -54,14 +54,14 @@ public class AnimeCollectionDITestImpl implements AnimeCollectionDITest {
     @Override
     public void getMap() {
         map.forEach((k,v)->{
-            System.out.println("k:"+k+"v:"+v);
+            System.out.println("k:"+k+"  v:"+v);
         });
     }
 
     @Override
     public void getProperties() {
         properties.forEach((k,v)->{
-            System.out.println("k:"+k+"v:"+v);
+            System.out.println("k:"+k+"  v:"+v);
         });
     }
 }

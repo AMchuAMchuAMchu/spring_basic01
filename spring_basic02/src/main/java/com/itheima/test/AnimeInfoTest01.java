@@ -19,11 +19,24 @@ public class AnimeInfoTest01 {
 
 
     @Test
+    public void testDruidDatasource(){
+
+        Object dataSource = cpx.getBean("dataSource");
+
+        System.out.println(dataSource);
+
+    }
+
+
+    @Test
     public void testAnimeCollectionDI(){
         AnimeCollectionDITestImpl bean = cpx.getBean(AnimeCollectionDITestImpl.class);
         bean.getList();
+        System.out.println("================");
         bean.getSet();
+        System.out.println("================");
         bean.getMap();
+        System.out.println("================");
         bean.getProperties();
     }
 
