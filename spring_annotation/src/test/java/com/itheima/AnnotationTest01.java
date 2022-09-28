@@ -2,7 +2,6 @@ package com.itheima;
 
 import com.itheima.cfg.SpringConfig;
 import com.itheima.dao.impl.AnimeInfoImpl;
-import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class AnnotationTest01 {
 
-    public ClassPathXmlApplicationContext cpx = new ClassPathXmlApplicationContext("bark/spring.xml");
+    public ClassPathXmlApplicationContext cpx = new ClassPathXmlApplicationContext("bark/spring.xml.bark");
 
     public static AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
 
