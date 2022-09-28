@@ -13,6 +13,11 @@ import com.itheima.dao.AnimeTime;
 public class AnimeTimeImpl implements AnimeTime {
     @Override
     public void getAnimeTime() {
+
+        AnimeInfoImpl animeInfo = new AnimeInfoImpl();
+        animeInfo.test(9);
+
+
         System.out.println(">> 2022 >>");
     }
 }

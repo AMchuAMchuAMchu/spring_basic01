@@ -9,6 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.sql.SQLException;
 import java.util.Map;
 
+
+
 /**
  * Description==>TODO
  * BelongsProject==>spring_basic01
@@ -26,6 +28,8 @@ public class AnimeInfoTest01 {
     @Test
     public void testLazy_init(){
 
+    
+        
 
 
     }
@@ -43,6 +47,8 @@ public class AnimeInfoTest01 {
 
     @Test
     public void testDruidDatasource() throws SQLException {
+
+
 
         DruidDataSource dataSource = cpx.getBean(DruidDataSource.class);
 

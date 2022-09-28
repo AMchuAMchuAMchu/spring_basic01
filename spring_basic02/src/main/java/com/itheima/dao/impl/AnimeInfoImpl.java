@@ -13,7 +13,29 @@ import com.itheima.dao.AnimeTime;
  * Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start
  */
 public class AnimeInfoImpl implements AnimeInfo {
+    
+    
+    
+   
+    /**
+    * Description ==> TODO
+    * Return ==> java.lang.String
+    * Param ==> [id]
+    * Date ==> 2022/9/28 15:51
+    * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
+    */
+    public String test(Integer id){
+        return "Lycoris Recoil";
+        
+    }
 
+    /**
+    * Description ==> TODO
+    * Return ==> 
+    * Param ==> []
+    * Date ==> 2022/9/28 15:54 
+    * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
+    */
     public AnimeInfoImpl() {
         System.out.println("AnimeInfoImpl constructor....");
     }
