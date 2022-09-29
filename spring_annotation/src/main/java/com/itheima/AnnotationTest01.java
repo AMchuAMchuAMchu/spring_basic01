@@ -29,8 +29,11 @@ public class AnnotationTest01 {
 
 
     public static void main(String[] args) {
-        AnimeInfoImpl bean = ac.getBean(AnimeInfoImpl.class);
-        bean.sayHello();
+        AnimeInfoImpl bean01 = ac.getBean(AnimeInfoImpl.class);
+        AnimeInfoImpl bean02 = ac.getBean(AnimeInfoImpl.class);
+        System.out.println(bean01);
+        System.out.println(bean02);
+//        bean.sayHello();
     }
 
 

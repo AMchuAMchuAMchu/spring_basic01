@@ -1,6 +1,7 @@
 package com.itheima.dao.impl;
 
 import com.itheima.dao.AnimeInfo;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
  * Version==>1.0
  * Author==>02雪乃赤瞳楪祈校条祭制作委员会 wyq_start
  */
+@Scope("")
 @Component
 public class AnimeInfoImpl implements AnimeInfo {
     @Override
