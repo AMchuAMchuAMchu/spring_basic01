@@ -1,10 +1,14 @@
 package com.itheima;
 
+import com.itheima.cfg.DruidDataSourceTest;
 import com.itheima.cfg.SpringConfig;
 import com.itheima.dao.impl.AnimeInfoImpl;
 import com.itheima.dao.impl.JDBCSource;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
+import java.sql.Connection;
 
 /**
  * Description==>TODO
@@ -18,6 +22,21 @@ public class AnnotationTest01 {
 
 
     public static AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+
+
+    @Test
+    public void testDruidDataSource(){
+
+        DruidDataSourceTest bean = ac.getBean(DruidDataSourceTest.class);
+
+        Connection dataSource = bean.getDataSource();
+
+        System.out.println(dataSource);
+
+    }
+
+
 
 //    @Test
 //    public void testAnnotationCfg(){

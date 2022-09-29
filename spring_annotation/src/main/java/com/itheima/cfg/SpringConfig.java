@@ -1,11 +1,10 @@
 package com.itheima.cfg;
 
 
-import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
-import javax.sql.DataSource;
 
 /**
  * Description==>TODO
@@ -17,22 +16,8 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ComponentScan("com.itheima")
+@Import({DruidDataSourceTest.class})
 public class SpringConfig {
 
-    public DataSource getDataSource(){
-
-        DruidDataSource dataSource = new DruidDataSource();
-
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-
-        dataSource.setUrl("jdbc:mysql://localhost:3306/anime_test01?serverTimezone=UTC");
-
-        dataSource.setUsername("root");
-
-        dataSource.setPassword("root");
-
-        return dataSource;
-
-    }
 
 }
