@@ -2,6 +2,8 @@ package com.itheima;
 
 import com.itheima.cfg.SpringConfig;
 import com.itheima.dao.impl.AnimeInfoImpl;
+import com.itheima.dao.impl.JDBCSource;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -28,11 +30,46 @@ public class AnnotationTest01 {
 //    }
 
 
-    public static void main(String[] args) {
+    @Test
+    public void testJdbc(){
+
+        JDBCSource bean = ac.getBean(JDBCSource.class);
+
+        bean.test();
+
+    }
+
+    @Test
+    public void testAutowired(){
+
+        AnimeInfoImpl bean = ac.getBean(AnimeInfoImpl.class);
+
+        bean.sayHello();
+
+
+
+    }
+
+
+    @Test
+    public void testSingleType(){
+
         AnimeInfoImpl bean01 = ac.getBean(AnimeInfoImpl.class);
         AnimeInfoImpl bean02 = ac.getBean(AnimeInfoImpl.class);
         System.out.println(bean01);
         System.out.println(bean02);
+        ac.registerShutdownHook();
+
+    }
+
+
+    @Test
+    public void test01(){
+        AnimeInfoImpl bean01 = ac.getBean(AnimeInfoImpl.class);
+        AnimeInfoImpl bean02 = ac.getBean(AnimeInfoImpl.class);
+        System.out.println(bean01);
+        System.out.println(bean02);
+        ac.registerShutdownHook();
 //        bean.sayHello();
     }
 

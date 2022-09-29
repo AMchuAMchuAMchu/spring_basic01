@@ -3,7 +3,7 @@ package com.itheima.test;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.itheima.dao.impl.AnimeCollectionDITestImpl;
 import com.itheima.dao.impl.AnimeInfoImpl;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.SQLException;

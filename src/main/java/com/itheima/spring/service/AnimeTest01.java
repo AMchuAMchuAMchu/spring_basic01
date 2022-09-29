@@ -3,7 +3,7 @@ package com.itheima.spring.service;
 import com.itheima.spring.dao.AnimeTime;
 import com.itheima.spring.impl.*;
 import com.itheima.spring.utils.FactoryCreateBean;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
