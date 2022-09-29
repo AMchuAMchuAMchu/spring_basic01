@@ -2,8 +2,10 @@ package com.itheima.cfg;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
@@ -17,7 +19,17 @@ import java.sql.SQLException;
  * CreateTime ==> 2022-09-29 13:03:13
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
+@PropertySource("classpath:jdbc.properties")
 public class DruidDataSourceTest {
+
+    @Value("${jdbc.driverClassName}")
+    private String driverClassName;
+    @Value("${jdbc.url}")
+    private String url;
+    @Value("${jdbc.username}")
+    private String username;
+    @Value("${jdbc.password}")
+    private String password;
 
     @Bean
     public Connection getDataSource() {
@@ -26,13 +38,13 @@ public class DruidDataSourceTest {
 
         DruidDataSource dataSource = new DruidDataSource();
 
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setDriverClassName(driverClassName);
 
-        dataSource.setUrl("jdbc:mysql://localhost:3306/anime_test01?serverTimezone=UTC");
+        dataSource.setUrl(url);
 
-        dataSource.setUsername("root");
+        dataSource.setUsername(username);
 
-        dataSource.setPassword("root");
+        dataSource.setPassword(password);
 
         try {
             connection = dataSource.getConnection();
